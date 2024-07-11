@@ -2,9 +2,12 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import org.json.JSONObject;
 
 public class ExchangeRateAPI {
-    private static final String API_URL = "https://v6.exchangerate-api.com/v6/e5eb9603d58eef8f77142313/latest/USD";
+
+    private static final String API_KEY = "5738beaccfcdcf43de783378"; // Reemplaza con tu clave de API válida
+    private static final String API_URL = "https://v6.exchangerate-api.com/v6/" + API_KEY + "/pair/";
 
     public static double getExchangeRate(String fromCurrency, String toCurrency) {
         try {
