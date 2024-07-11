@@ -10,7 +10,9 @@ public class ConvertidorM {
             System.out.println("Seleccione una opción:");
             System.out.println("1. Convertir de USD a EUR");
             System.out.println("2. Convertir de USD a MXN");
-            System.out.println("3. Salir");
+            System.out.println("3. Converir de EUR a MXN");
+            System.out.println("4. Converir de MXN a EUR");
+            System.out.println("5. Salir");
 
             opcion = scanner.nextInt();
 
@@ -22,6 +24,10 @@ public class ConvertidorM {
                     convertirMoneda("USD", "MXN");
                     break;
                 case 3:
+                    convertirMoneda("EUR", "MXN");
+                case 4:
+                    convertirMoneda("MXN", "EUR");
+                case 5:
                     System.out.println("Saliendo del programa...");
                     break;
                 default:
